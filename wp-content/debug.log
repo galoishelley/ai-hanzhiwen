@@ -1,0 +1,33 @@
+[26-Jun-2020 14:48:56 UTC] PHP Notice:  Undefined offset: 0 in C:\wamp64\www\legpress.local\wp-includes\class-wp-query.php on line 3271
+[26-Jun-2020 14:48:56 UTC] PHP Stack trace:
+[26-Jun-2020 14:48:56 UTC] PHP   1. {main}() C:\wamp64\www\legpress.local\index.php:0
+[26-Jun-2020 14:48:56 UTC] PHP   2. require() C:\wamp64\www\legpress.local\index.php:17
+[26-Jun-2020 14:48:56 UTC] PHP   3. require_once() C:\wamp64\www\legpress.local\wp-blog-header.php:19
+[26-Jun-2020 14:48:56 UTC] PHP   4. do_action() C:\wamp64\www\legpress.local\wp-includes\template-loader.php:13
+[26-Jun-2020 14:48:56 UTC] PHP   5. WP_Hook->do_action() C:\wamp64\www\legpress.local\wp-includes\plugin.php:478
+[26-Jun-2020 14:48:56 UTC] PHP   6. WP_Hook->apply_filters() C:\wamp64\www\legpress.local\wp-includes\class-wp-hook.php:311
+[26-Jun-2020 14:48:56 UTC] PHP   7. lp_styleguide_template() C:\wamp64\www\legpress.local\wp-includes\class-wp-hook.php:287
+[26-Jun-2020 14:48:56 UTC] PHP   8. include() C:\wamp64\www\legpress.local\wp-content\plugins\styleguide-lp\styleguide.php:27
+[26-Jun-2020 14:48:56 UTC] PHP   9. the_post() C:\wamp64\www\legpress.local\wp-content\plugins\styleguide-lp\page-styleguide.php:2
+[26-Jun-2020 14:48:56 UTC] PHP  10. WP_Query->the_post() C:\wamp64\www\legpress.local\wp-includes\query.php:970
+[26-Jun-2020 14:48:56 UTC] PHP  11. WP_Query->next_post() C:\wamp64\www\legpress.local\wp-includes\class-wp-query.php:3300
+[26-Jul-2020 11:57:02 UTC] PHP Warning:  An unexpected error occurred. Something may be wrong with WordPress.org or this server&#8217;s configuration. If you continue to have problems, please try the <a href="https://wordpress.org/support/forums/">support forums</a>. (WordPress could not establish a secure connection to WordPress.org. Please contact your server administrator.) in /Users/gracemiao/Project/legpress-wp-base-install/wp-includes/update.php on line 162
+[26-Jul-2020 11:57:32 UTC] PHP Warning:  An unexpected error occurred. Something may be wrong with WordPress.org or this server&#8217;s configuration. If you continue to have problems, please try the <a href="https://wordpress.org/support/forums/">support forums</a>. (WordPress could not establish a secure connection to WordPress.org. Please contact your server administrator.) in /Users/gracemiao/Project/legpress-wp-base-install/wp-includes/update.php on line 388
+[26-Jul-2020 11:57:52 UTC] PHP Warning:  An unexpected error occurred. Something may be wrong with WordPress.org or this server&#8217;s configuration. If you continue to have problems, please try the <a href="https://wordpress.org/support/forums/">support forums</a>. (WordPress could not establish a secure connection to WordPress.org. Please contact your server administrator.) in /Users/gracemiao/Project/legpress-wp-base-install/wp-includes/update.php on line 578
+[26-Jul-2020 13:12:41 UTC] PHP Warning:  mysqli_real_connect(): (HY000/2002): No such file or directory in /Users/gracemiao/Project/legpress-wp-base-install/wp-includes/wp-db.php on line 1626
+[26-Jul-2020 13:49:57 UTC] PHP Warning:  mysqli_real_connect(): (HY000/2002): No such file or directory in /Users/gracemiao/Project/legpress-wp-base-install/wp-includes/wp-db.php on line 1626
+[26-Jul-2020 14:29:11 UTC] PHP Warning:  mysqli_real_connect(): (HY000/2002): No such file or directory in /Users/gracemiao/Project/legpress-wp-base-install/wp-includes/wp-db.php on line 1626
+[26-Jul-2020 14:31:14 UTC] PHP Warning:  mysqli_real_connect(): (HY000/2002): No such file or directory in /Users/gracemiao/Project/legpress-wp-base-install/wp-includes/wp-db.php on line 1626
+[26-Jul-2020 15:04:54 UTC] PHP Warning:  mysqli_real_connect(): (HY000/2002): No such file or directory in /Users/gracemiao/Project/legpress-wp-base-install/wp-includes/wp-db.php on line 1626
+[26-Jul-2020 15:46:09 UTC] PHP Warning:  mysqli_real_connect(): (HY000/2002): No such file or directory in /Users/gracemiao/Project/legpress-wp-base-install/wp-includes/wp-db.php on line 1626
+[26-Jul-2020 16:18:23 UTC] PHP Warning:  mysqli_real_connect(): (HY000/2002): No such file or directory in /Users/gracemiao/Project/legpress-wp-base-install/wp-includes/wp-db.php on line 1626
+[26-Jul-2020 16:46:08 UTC] PHP Warning:  mysqli_real_connect(): (HY000/2002): No such file or directory in /Users/gracemiao/Project/legpress-wp-base-install/wp-includes/wp-db.php on line 1626
+[26-Jul-2020 17:22:08 UTC] PHP Warning:  mysqli_real_connect(): (HY000/2002): No such file or directory in /Users/gracemiao/Project/legpress-wp-base-install/wp-includes/wp-db.php on line 1626
+[26-Jul-2020 17:55:52 UTC] PHP Warning:  mysqli_real_connect(): (HY000/2002): No such file or directory in /Users/gracemiao/Project/legpress-wp-base-install/wp-includes/wp-db.php on line 1626
+[26-Jul-2020 18:37:14 UTC] PHP Warning:  mysqli_real_connect(): (HY000/2002): No such file or directory in /Users/gracemiao/Project/legpress-wp-base-install/wp-includes/wp-db.php on line 1626
+[26-Jul-2020 19:17:43 UTC] PHP Warning:  mysqli_real_connect(): (HY000/2002): No such file or directory in /Users/gracemiao/Project/legpress-wp-base-install/wp-includes/wp-db.php on line 1626
+[26-Jul-2020 19:19:44 UTC] PHP Warning:  mysqli_real_connect(): (HY000/2002): No such file or directory in /Users/gracemiao/Project/legpress-wp-base-install/wp-includes/wp-db.php on line 1626
+[26-Jul-2020 19:51:56 UTC] PHP Warning:  mysqli_real_connect(): (HY000/2002): No such file or directory in /Users/gracemiao/Project/legpress-wp-base-install/wp-includes/wp-db.php on line 1626
+[26-Jul-2020 20:26:23 UTC] PHP Warning:  mysqli_real_connect(): (HY000/2002): No such file or directory in /Users/gracemiao/Project/legpress-wp-base-install/wp-includes/wp-db.php on line 1626
+[26-Jul-2020 21:12:24 UTC] PHP Warning:  mysqli_real_connect(): (HY000/2002): No such file or directory in /Users/gracemiao/Project/legpress-wp-base-install/wp-includes/wp-db.php on line 1626
+[26-Jul-2020 21:46:45 UTC] PHP Warning:  mysqli_real_connect(): (HY000/2002): No such file or directory in /Users/gracemiao/Project/legpress-wp-base-install/wp-includes/wp-db.php on line 1626
