@@ -1,0 +1,94 @@
+.module__team {
+	position: relative;
+	padding: 0;
+	height: auto;
+	overflow: hidden;
+	background: white;
+
+	&__image {
+		width: 100%;
+		height: 100%;
+
+		img {
+			height: 100%;
+			object-fit: cover;
+			object-position: center center;
+			margin: auto;
+		}
+	}
+
+	&__copy {
+		// background: rgba($black, 0.35);
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		display: flex;
+		align-items: center;
+		width: 100%;
+
+		.container{
+			height: 100%;
+		}
+
+		.member-title{
+			h1 {
+				color: white;
+				text-align: center;
+				margin: 60px auto 50px;
+				// margin-bottom: 70px;
+			}
+		}
+
+		.member{
+			padding: 0 55px;
+		}
+		
+		.member_col{
+			padding-left: 7px;
+			padding-right:7px;
+		}
+
+
+		.member-panel {
+			display: inline-block;
+			background-color: white;
+			margin: 20px 0;
+			padding: 20px 20px;
+			text-align: center;
+
+			h2,
+			h5 {
+				color: black;
+				text-align: center;
+			}
+
+			p {
+				color: black;
+				text-align: left;
+				font-size: 14px;
+			}
+
+			img {
+				width: 359px;
+				height: 278px;
+				margin:0;
+				margin-bottom: 15px;
+			}
+		}
+	}
+}
+
+.typography>:first-child {
+	margin-top: 45px;
+}
+
+.typography {
+	h2,h5{
+	margin:0;
+	}
+	img{
+		margin:10px;
+	}
+}

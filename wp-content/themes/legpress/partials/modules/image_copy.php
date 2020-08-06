@@ -8,23 +8,15 @@ $button = get_sub_field('button');
 $image_class = '';
 if ($order == 'copy_image') {
 	$image_class = 'order-md-2';
-	// $col_up = 5;
-	// $col_down = 7;
-} else{
-	$image_copy = "image_copy";
-	// $col_up = 6;
-	// $col_down = 6;
-}?>
-<section class="module module__copy-image ">
-
-
-			<div class="module__copy-image__image <?= $image_class?>">
+} ?>
+<section class="module module__copy-image">
+	<div class="container">
+		<div class="row">
+			<div class="module__copy-image__image col-12 col-md-6 <?php echo $image_class; ?>">
 				<?php echo wp_get_attachment_image($image_id, 'medium'); ?>
 			</div>
-
-
-			<div class="module__copy-image__copy  ">
-				<div class="module__copy-image__copy__inner">
+			<div class="module__copy-image__copy col-12 col-md-6">
+				<div class="module__copy-image__copy__inner typography">
 					<h1><?php echo $heading; ?></h1>
 					<?php echo $copy; ?>
 					<?php
@@ -32,12 +24,12 @@ if ($order == 'copy_image') {
 						$url = $button['url'];
 						$label = $button['title'];
 						$target = $button['target']; ?>
-						<a class="btn" href="<?php echo $url; ?>" target="<?php echo $target; ?>"><?php echo $label; ?></a>
+						<a class="btn btn-white btn-white--hollow" href="<?php echo $url; ?>" target="<?php echo $target; ?>"><?php echo $label; ?></a>
 					<?php } ?>
 
 
 				</div>
 			</div>
 		</div>
-	
+	</div>
 </section>

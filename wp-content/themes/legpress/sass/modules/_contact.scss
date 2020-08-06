@@ -1,0 +1,41 @@
+.module__contact {
+	.row{
+		padding: 50px 50px;
+	}
+	&__image {
+		margin-bottom: rem(15);
+
+		@include media-breakpoint-up(md) {
+			margin-bottom: 0;
+		}
+
+		img {
+
+			@include media-breakpoint-up(md) {
+				height: 100%;
+				object-fit: cover;
+				object-position: center center;
+				width: 480px;
+				height: 528px;
+			}
+		}
+	}
+
+	&__copy {
+		display: flex;
+		align-items: center;
+
+		&__inner {
+			width: 100%;
+
+			@include media-breakpoint-up(md) {
+				padding: rem(20);
+			}
+
+			p{
+				line-height: 2;
+			}
+			
+		}
+	}
+}

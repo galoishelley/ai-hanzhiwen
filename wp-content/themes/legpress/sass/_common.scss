@@ -6,6 +6,12 @@ html,body{
 	height:100%;
 	width:100%;
 	@include font-smoothing(on);
+	font-family: 'Noto Sans SC', sans-serif;
+}
+
+.container{
+	padding-right: 0;
+	padding-left: 0;
 }
 
 .wrapper {

@@ -34,29 +34,29 @@ function lp_register_sidebars() {
 add_action('widgets_init', 'lp_register_sidebars');
 
 function lp_register_post_types() {
-	/*register_post_type('project', array(
+	register_post_type('member', array(
 		'labels'		=> array(
-			'name'			   => __( 'Projects' ),
-			'singular_name'	  => __( 'Project' ),
+			'name'			   => __( 'Team Members' ),
+			'singular_name'	  => __( 'Team Member' ),
 			'add_new'			=> __( 'Add New' ),
-			'add_new_item'	   => __( 'Add New Project' ),
-			'edit_item'		  => __( 'Edit Project' ),
-			'new_item'		   => __( 'New Project' ),
-			'all_items'		  => __( 'All Projects' ),
-			'view_item'		  => __( 'View Project' ),
-			'search_items'	   => __( 'Search Project' ),
-			'not_found'		  => __( 'No Projects found' ),
-			'not_found_in_trash' => __( 'No Projects found in the Trash' ),
+			'add_new_item'	   => __( 'Add New Team Member' ),
+			'edit_item'		  => __( 'Edit Team Member' ),
+			'new_item'		   => __( 'New Team Member' ),
+			'all_items'		  => __( 'All Team Members' ),
+			'view_item'		  => __( 'View Team Member' ),
+			'search_items'	   => __( 'Search Team Member' ),
+			'not_found'		  => __( 'No Team Members found' ),
+			'not_found_in_trash' => __( 'No Team Members found in the Trash' ),
 			'parent_item_colon'  => '',
-			'menu_name'		  => 'Projects'
+			'menu_name'		  => 'Team Members'
 		),
 		'public'		=> true,
-		'supports'	  => array( 'title', 'editor', 'revisions' ),
+		'supports'	  => array( 'title', 'editor', 'revisions','thumbnail' ),
 		'taxonomies'	=> array('category'),
-		'has_archive'   => 'projects',
+		'has_archive'   => 'members',
 		'menu_icon'	 => 'dashicons-hammer',
-		'rewrite'	   => array('slug' => 'project', 'with_front' => true),
-	));*/
+		'rewrite'	   => array('slug' => 'member', 'with_front' => true),
+	));
 }
 add_action('init', 'lp_register_post_types');
 

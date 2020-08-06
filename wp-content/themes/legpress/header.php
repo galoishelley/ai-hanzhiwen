@@ -4,6 +4,7 @@
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">		
 	<link rel="profile" href="http://gmpg.org/xfn/11">
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
 	
 	<?php if ( is_singular() && pings_open( get_queried_object() ) ) : ?>
 		<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
@@ -34,17 +35,27 @@ print '-->';
 <div id="top"></div>
 <div class="wrapper">
 	<header class="site-header">
-		<div class="container">
-			<div class="row align-items-end">
-				<div class="site-header__logo col-12 col-md-4">
-					<span>Styleguide Demo</span>
+		
+				<div class="site-header__logo">
+				<a href="<?php echo bloginfo('url'); ?>" title="Return to the homepage" class="primary-logo"><img src="<?php bloginfo('template_directory'); ?>/images/logo.png" alt="Logo"></a>
 				</div>
-				<div class="site-header__menu col-12 col-md-8">
+				<div class="site-header__menu">
 					<?php
 					wp_nav_menu(array(
 						'theme_location' => 'header-menu'
 					)); ?>
 				</div>
-			</div>
-		</div>
+
+				<div class="site-header__right_search">
+							<form id="desktop-search" class="search" action="/" method="get" style="display:inline-flex;">
+								<input type="text" name="s" id="site-search" placeholder="Search...">
+								<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/mag.svg" alt="">
+							</form>
+							
+
+
+							<a href="#" title="search" class="primary-logo"><img src="<?php bloginfo('template_directory'); ?>/images/search icon.svg" alt="search_icon"></a>
+
+						</div>
+			
 	</header>

@@ -1,11 +1,25 @@
 .site-header {
-	background: $primary;
+	background: transparent;
 	padding-top: rem(32);
+	padding-left: rem(50);
+	padding-right: rem(50);
+	position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+
+	display: flex;
+	justify-content: space-between;
 
 	&__logo {
 		color: $white;
 		font-weight: $font-weight-bold;
 		padding-bottom: rem(10);
+
+		img {
+			width: 140px;
+		}
 	}
 
 	&__menu {
@@ -15,7 +29,7 @@
 
 			@include media-breakpoint-up(md) {
 				display: flex;
-				justify-content: flex-end;
+				justify-content: center;
 			}
 
 			li {
@@ -26,6 +40,9 @@
 				}
 
 				a {
+
+					font-size: 19px;
+					font-weight: 600;
 					color: rgba($white, 0.75);
 					display: block;
 					padding-top: rem(15);
@@ -49,4 +66,13 @@
 			}
 		}
 	}
+
+	&__right_search {
+		input {
+			border-radius: 7px;
+			border: 1px solid #DBDBDB;
+			margin-right: 5px;
+		}
+	}
+
 }

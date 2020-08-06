@@ -1,3 +1,17 @@
 .module {
-	padding: rem(30) 0;
+	// padding: rem(30) 0;
+
+	h1 {
+		font-size: 3.0rem;
+	}
+
+	.btn {
+		padding: 7px 25px;
+		font-size: 18px;
+		font-weight: 600;
+	}
+
+	p {
+		font-size: 18px;
+	}
 }
