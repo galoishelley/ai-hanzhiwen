@@ -17,9 +17,9 @@ Example
 ```php
 add_filter( 'ninja_forms_services', function( $services ){
   $services[ 'my-service' ] => [
-    'name' => esc_html__( 'My Service', 'textdomain' ),
+    'name' => __( 'My Service', 'textdomain' ),
     'slug' => 'my-service', // Duplicate of the array key.
-    'description' => esc_html__( 'This is my service.', 'textdomain' ),
+    'description' => __( 'This is my service.', 'textdomain' ),
     'enabled' => true,
     'installPath' => 'my-plugin/my-plugin.php',
   ];
