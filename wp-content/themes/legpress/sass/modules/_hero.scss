@@ -63,6 +63,11 @@
 			color: white;
 			font-weight: 300;
 			margin-bottom: 24px;
+
+			@media screen and (max-width:$screen-sm-max) 
+			{
+				max-width: 200px;
+			}
 		}
 
 		p{

@@ -1,4 +1,4 @@
-jQuery(document).ready(function($){
+jQuery(document).ready(function ($) {
     $(document.body).removeClass('no-js').addClass('js');
 
     initPolyfills();
@@ -19,13 +19,22 @@ jQuery(document).ready(function($){
 // Initialize and add the map
 function initMap() {
     // The location of Uluru
-    var uluru = {lat: 39.9725341, lng: 116.3183093};
+    var uluru = {
+        lat: 39.9725341,
+        lng: 116.3183093
+    };
     // The map, centered at Uluru
     var map = new google.maps.Map(
-        document.getElementById('map'), {zoom: 13, center: uluru});
+        document.getElementById('map'), {
+            zoom: 13,
+            center: uluru
+        });
     // The marker, positioned at Uluru
-    var marker = new google.maps.Marker({position: uluru, map: map});
-  }
+    var marker = new google.maps.Marker({
+        position: uluru,
+        map: map
+    });
+}
 
 
 function isMobile() {
@@ -38,7 +47,7 @@ function initPolyfills() {
 
     // polyfill for IE - startsWith
     if (!String.prototype.startsWith) {
-        String.prototype.startsWith = function(searchString, position) {
+        String.prototype.startsWith = function (searchString, position) {
             position = position || 0;
             return this.indexOf(searchString, position) === position;
         };
@@ -47,10 +56,10 @@ function initPolyfills() {
     // polyfill for IE - forEach
     if ('NodeList' in window && !NodeList.prototype.forEach) {
         NodeList.prototype.forEach = function (callback, thisArg) {
-          thisArg = thisArg || window;
-          for (var i = 0; i < this.length; i++) {
-            callback.call(thisArg, this[i], i, this);
-          }
+            thisArg = thisArg || window;
+            for (var i = 0; i < this.length; i++) {
+                callback.call(thisArg, this[i], i, this);
+            }
         };
     }
 }
@@ -60,11 +69,11 @@ function initPolyfills() {
  * Toggle class on click
  */
 function initClassToggle() {
-    $(document.body).on('click', '[data-toggle="class"][data-class]', function(event) {
+    $(document.body).on('click', '[data-toggle="class"][data-class]', function (event) {
         var $trigger = $(this);
         var $target = $($trigger.data('target') ? $trigger.data('target') : $trigger.attr('href'));
 
-        if($target.length) {
+        if ($target.length) {
             event.preventDefault();
             $target.toggleClass($trigger.data('class'));
             $trigger.toggleClass('classed');
@@ -77,10 +86,10 @@ function initClassToggle() {
  * Smooth anchor scrolling
  */
 function initAnchorScroll() {
-    $('a[href*="#"]:not([data-toggle])').click(function(event) {
-        if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+    $('a[href*="#"]:not([data-toggle])').click(function (event) {
+        if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
             var target = $(this.hash);
-            target = target.length ? target : $('[name="'+this.hash.slice(1)+'"]');
+            target = target.length ? target : $('[name="' + this.hash.slice(1) + '"]');
             if (target.length && !target.parents('.woocommerce-tabs').length) {
                 event.preventDefault();
                 $('html, body').animate({
@@ -91,20 +100,24 @@ function initAnchorScroll() {
     });
 }
 
-function initBacktoTop(){
+function initBacktoTop() {
     var btn = $('#back_to_top');
 
-    $(window).scroll(function() {
-    if ($(window).scrollTop() > 300) {
-        btn.addClass('show');
-    } else {
-        btn.removeClass('show');
-    }
+
+    document.body.addEventListener('scroll', function(){
+        if (document.body.scrollTop > 300) {
+            btn.addClass('show');
+        } else {
+            btn.removeClass('show');
+        }
     });
 
-    btn.on('click', function(e) {
-    e.preventDefault();
-    $('html, body').animate({scrollTop:0}, '300');
+
+    btn.on('click', function (e) {
+        e.preventDefault();
+        $('html, body').animate({
+            scrollTop: 0
+        }, '300');
     });
 
 
@@ -169,9 +182,9 @@ function initBacktoTop(){
   });
 }*/
 
-function initMenu(){
-    $( ".e-mobile-menu__main-menu>ul>li>a" ).on( "click", document, function() {
-        $(".e-mobile-menu-input").prop("checked",false)
-        $(".e-mobile-menu__wrapper").prop("height",0);
+function initMenu() {
+    $(".e-mobile-menu__main-menu>ul>li>a").on("click", document, function () {
+        $(".e-mobile-menu-input").prop("checked", false)
+        $(".e-mobile-menu__wrapper").prop("height", 0);
     });
 }
