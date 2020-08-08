@@ -26,8 +26,7 @@ define( 'DB_NAME', 'hanzhiwen' );
 define( 'DB_USER', 'root' );
 
 /** MySQL database password */
-// define( 'DB_PASSWORD', 'root' );
-define( 'DB_PASSWORD', '(c3J1{JWahkHuHuN' );
+define( 'DB_PASSWORD', 'root' );
 
 /** MySQL hostname */
 define( 'DB_HOST', 'localhost' );

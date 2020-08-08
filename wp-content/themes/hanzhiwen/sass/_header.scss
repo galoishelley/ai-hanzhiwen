@@ -169,7 +169,7 @@
 		background-color: white;
 		position: absolute;
 		transform-origin: 50%;
-		transition: top 1s, bottom 1s, opacity 1s, transform 1s;
+		transition: top .5s, bottom .5s, opacity .5s, transform .5s;
 	}
 
 
@@ -187,7 +187,7 @@
 
 
 	.e-mobile-menu-input:checked~.e-mobile-menu__hamburger>.e-mobile-menu__hamburger__block {
-		transition: top 1s, bottom 1s, opacity 1s, transform 1s;
+		transition: top .5s, bottom .5s, opacity .5s, transform .5s;
 	}
 
 	.e-mobile-menu-input:checked~.e-mobile-menu__hamburger>.e-mobile-menu__hamburger__block:nth-child(1) {
