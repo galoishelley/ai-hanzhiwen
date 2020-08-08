@@ -10,7 +10,23 @@ jQuery(document).ready(function($){
     // CF7 Form Control
     //initCF7();
     //initFullheightMobile();
+
+    initMap();
+    initBacktoTop();
+    initMenu();
 });
+
+// Initialize and add the map
+function initMap() {
+    // The location of Uluru
+    var uluru = {lat: 39.9725341, lng: 116.3183093};
+    // The map, centered at Uluru
+    var map = new google.maps.Map(
+        document.getElementById('map'), {zoom: 13, center: uluru});
+    // The marker, positioned at Uluru
+    var marker = new google.maps.Marker({position: uluru, map: map});
+  }
+
 
 function isMobile() {
     return window.matchMedia('(max-width:767px)').matches;
@@ -75,6 +91,25 @@ function initAnchorScroll() {
     });
 }
 
+function initBacktoTop(){
+    var btn = $('#back_to_top');
+
+    $(window).scroll(function() {
+    if ($(window).scrollTop() > 300) {
+        btn.addClass('show');
+    } else {
+        btn.removeClass('show');
+    }
+    });
+
+    btn.on('click', function(e) {
+    e.preventDefault();
+    $('html, body').animate({scrollTop:0}, '300');
+    });
+
+
+}
+
 // function initCF7(){
 //     var wpcf7Elm = $('.wpcf7-form')[0];
 //     var formbtn = $('.wpcf7-form input[type="submit"]');
@@ -133,3 +168,10 @@ function initAnchorScroll() {
     document.body.removeChild(el);
   });
 }*/
+
+function initMenu(){
+    $( ".e-mobile-menu__main-menu>ul>li>a" ).on( "click", document, function() {
+        $(".e-mobile-menu-input").prop("checked",false)
+        $(".e-mobile-menu__wrapper").prop("height",0);
+    });
+}

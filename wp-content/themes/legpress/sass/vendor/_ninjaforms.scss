@@ -165,3 +165,14 @@
 		}
 	}
 }
+
+
+.nf-pass.field-wrap .nf-field-element:after{
+	top:-5px !important;
+}
+
+.nf-error.field-wrap .nf-field-element:after{
+	height: 37px !important;
+    width: 37px !important;
+    line-height: 41px !important;
+}

@@ -4,6 +4,7 @@ $image_id = get_sub_field('image');
 $order = get_sub_field('order');
 $heading = get_sub_field('heading');
 $button = get_sub_field('button');
+$id = get_sub_field('id');
 
 $image_class = '';
 if ($order == 'copy_image') {
@@ -15,8 +16,10 @@ if ($order == 'copy_image') {
 	// $col_up = 6;
 	// $col_down = 6;
 }?>
-<section class="module module__copy-image ">
 
+
+<section class="module module__copy-image " id="<?= $id?>">
+<div class="container">
 
 			<div class="module__copy-image__image <?= $image_class?>">
 				<?php echo wp_get_attachment_image($image_id, 'medium'); ?>
@@ -39,5 +42,5 @@ if ($order == 'copy_image') {
 				</div>
 			</div>
 		</div>
-	
+		</div>
 </section>

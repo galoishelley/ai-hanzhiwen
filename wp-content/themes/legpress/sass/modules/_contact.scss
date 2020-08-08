@@ -1,25 +1,14 @@
 .module__contact {
-	.row{
-		padding: 50px 50px;
-	}
-	&__image {
-		margin-bottom: rem(15);
 
-		@include media-breakpoint-up(md) {
-			margin-bottom: 0;
-		}
 
-		img {
-
-			@include media-breakpoint-up(md) {
-				height: 100%;
-				object-fit: cover;
-				object-position: center center;
-				width: 480px;
-				height: 528px;
-			}
+	#map {
+		height: 400px;  /* The height is 400 pixels */
+        width: 100%;  /* The width is the width of the web page */
+		@media screen and (max-width:$screen-sm-max) {
+			margin-bottom: 20px;
 		}
 	}
+
 
 	&__copy {
 		display: flex;
@@ -28,14 +17,36 @@
 		&__inner {
 			width: 100%;
 
-			@include media-breakpoint-up(md) {
-				padding: rem(20);
+			padding: rem(20);
+
+			@media screen and (max-width:$screen-sm-max) {
+				padding: 0;
 			}
 
-			p{
+			h1 {
+				// margin-top: 0;
+			}
+
+			p {
 				line-height: 2;
 			}
-			
+
 		}
 	}
+}
+
+.nf-field {
+	.nf-field-label {
+		display: none;
+	}
+}
+
+.nf-form-content {
+	@media screen and (max-width:$screen-sm-max) {
+		padding: 0 !important;
+	}
+}
+
+.typography>:first-child {
+	margin-top: 0;
 }

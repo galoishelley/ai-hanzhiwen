@@ -14,4 +14,11 @@
 	p {
 		font-size: 18px;
 	}
+
+	.container{
+
+		@media screen and (max-width:$screen-sm-max ){
+			padding: 0 10px;
+		}
+	}
 }

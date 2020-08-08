@@ -1,9 +1,5 @@
 .module__team {
-	position: relative;
-	padding: 0;
-	height: auto;
 	overflow: hidden;
-	background: white;
 
 	&__image {
 		width: 100%;
@@ -18,48 +14,62 @@
 	}
 
 	&__copy {
-		// background: rgba($black, 0.35);
-		position: absolute;
-		top: 0;
-		left: 0;
-		right: 0;
-		bottom: 0;
+		background: rgba($black, 0.35);
 		display: flex;
-		align-items: center;
-		width: 100%;
-
-		.container{
-			height: 100%;
-		}
+		flex-direction: column;
 
 		.member-title{
 			h1 {
 				color: white;
 				text-align: center;
-				margin: 60px auto 50px;
-				// margin-bottom: 70px;
+				margin: 90px auto;
+
+				@media screen and (max-width:$screen-sm-max) {
+					margin: 30px auto;
+				}
+
+				@media screen and (max-width:$screen-md-max) {
+					margin: 60px auto;
+				}
 			}
 		}
 
-		.member{
-			padding: 0 55px;
-		}
-		
-		.member_col{
-			padding-left: 7px;
-			padding-right:7px;
-		}
+		.members{
+			display: flex;
+			flex-direction: row;
+			padding:0 40px;	
 
+			@media screen and (max-width:$screen-sm-max) {
+				flex-direction: column;
+				padding:0;
+			}
+
+			@media screen and (max-width:$screen-md-max) {
+				padding:0 20px;	
+			}
+		}
 
 		.member-panel {
-			display: inline-block;
+			margin: 0 10px 40px;
+			padding: 20px 30px;
+
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
 			background-color: white;
-			margin: 20px 0;
-			padding: 20px 20px;
-			text-align: center;
+
+			@media screen and (max-width:$screen-sm-max) {
+				padding: 10px 10px;
+				margin: 10px 10px;
+			}
+
+			@media screen and (max-width:$screen-md-max) {
+				margin: 0 5px 30px;
+				padding: 10px 10px;
+			}
 
 			h2,
-			h5 {
+			h6 {
 				color: black;
 				text-align: center;
 			}
@@ -73,7 +83,7 @@
 			img {
 				width: 359px;
 				height: 278px;
-				margin:0;
+				margin: auto;
 				margin-bottom: 15px;
 			}
 		}
