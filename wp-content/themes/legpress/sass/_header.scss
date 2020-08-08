@@ -190,7 +190,6 @@
 			width: 40px;
 			height: 4px;
 			background-color: white;
-	
 			position: absolute;
 			transition: top .2s .1s, bottom .2s .1s, opacity .2s 0s, transform .2s 0s, background-color .2s 0s;
 			transform-origin: 50%;
@@ -293,6 +292,12 @@
 	opacity: 0;
 	visibility: hidden;
 	z-index: 1000;
+
+	@media screen and (max-width:$screen-sm-max) 
+	{
+		width: 40px;
+		height: 40px;
+	}
   }
   #back_to_top::after {
 	content: "\f077";
@@ -302,6 +307,11 @@
 	font-size: 2em;
 	line-height: 50px;
 	color: #fff;
+
+	@media screen and (max-width:$screen-sm-max) 
+	{
+		line-height: 40px;
+	}
   }
   #back_to_top:hover {
 	cursor: pointer;
