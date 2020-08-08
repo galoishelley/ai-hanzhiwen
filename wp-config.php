@@ -26,7 +26,8 @@ define( 'DB_NAME', 'hanzhiwen' );
 define( 'DB_USER', 'root' );
 
 /** MySQL database password */
-define( 'DB_PASSWORD', 'root' );
+// define( 'DB_PASSWORD', 'root' );
+define( 'DB_PASSWORD', '(c3J1{JWahkHuHuN' );
 
 /** MySQL hostname */
 define( 'DB_HOST', 'localhost' );
@@ -80,6 +81,7 @@ $table_prefix = 'lp_';
 define('WP_DEBUG', true);
 define('WP_DEBUG_LOG', true);
 define('WP_DEBUG_DISPLAY', false);
+define( 'FS_METHOD', 'direct' );
 
 /* That's all, stop editing! Happy publishing. */
 
