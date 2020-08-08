@@ -50,7 +50,7 @@
 				<div class="site-header__right_search">
 					<form id="desktop-search" class="search" action="/" method="get" style="display:inline-flex;">
 						<input type="text" name="s" id="site-search" placeholder="Search...">
-						<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/mag.svg" alt="">
+		
 					</form>
 
 
