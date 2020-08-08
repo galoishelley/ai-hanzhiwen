@@ -2,7 +2,7 @@
 $image_id = get_sub_field('background_image');
 $title = get_sub_field('title');
 ?>
-<section class="module module__team" id="team">
+<section class="module module__team">
 	<div class="container">
 		<div class="module__team__image" style="background:url(<?= wp_get_attachment_image_src($image_id, 'full')[0]; ?>) repeat center/ 100% 100%;">
 			<div class="module__team__copy">
@@ -11,7 +11,7 @@ $title = get_sub_field('title');
 					<h1><?php echo $title; ?></h1>
 				</div>
 
-				<div class="members">
+				<div class="members"  id="team">
 					<?php $post_objects = get_sub_field('member'); ?>
 
 					<?php if ($post_objects) : ?>

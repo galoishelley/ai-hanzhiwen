@@ -18,7 +18,7 @@ if ($order == 'copy_image') {
 }?>
 
 
-<section class="module module__copy-image " id="<?= $id?>">
+<section class="module module__copy-image ">
 <div class="container">
 
 			<div class="module__copy-image__image <?= $image_class?>">
@@ -26,7 +26,7 @@ if ($order == 'copy_image') {
 			</div>
 
 
-			<div class="module__copy-image__copy  ">
+			<div class="module__copy-image__copy " id="<?= $id?>">
 				<div class="module__copy-image__copy__inner">
 					<h1><?php echo $heading; ?></h1>
 					<?php echo $copy; ?>
