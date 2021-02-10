@@ -13,6 +13,7 @@ require 'inc/menus.php';
 require 'inc/misc.php';
 require 'inc/query.php';
 require 'inc/register.php';
+require 'inc/rest.php';
 
 
 // Set the homepage <title> attribute;
