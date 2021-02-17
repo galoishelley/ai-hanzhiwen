@@ -139,10 +139,16 @@ class My_REST_Posts_Controller
             $res['content'] = $store_chapter->post_content;
             return rest_ensure_response($res);
         } else {
+
+            //Calculate SHA-1 Key
+            $cpid="hanzhiwen";
+            $idcode="b22c62d875cedc9ff380a0568190b49b";
+            $seed= $cpid.$idcode.$bookId;
+            $sha1_key=sha1($seed);
             $curl = curl_init();
 
             curl_setopt_array($curl, array(
-                CURLOPT_URL => 'http://openapi.yc.ifeng.com/open/getPartContent/?cpid=hanzhiwen&key=8421b7898bcc5fc4e5c0edc5f1a2ec9b46681275&bookId=' . $bookId . '&chapterId=' . $chapterId,
+                CURLOPT_URL => 'http://openapi.yc.ifeng.com/open/getPartContent/?cpid=hanzhiwen&key='.$sha1_key.'&bookId=' . $bookId . '&chapterId=' . $chapterId,
                 CURLOPT_RETURNTRANSFER => true,
                 CURLOPT_ENCODING => '',
                 CURLOPT_MAXREDIRS => 10,
@@ -167,6 +173,12 @@ class My_REST_Posts_Controller
                 $res['data'] = array('status' => $this->ERROR_05);
                 return rest_ensure_response($res);
             }
+
+
+            //网文常用字典替换
+            $data['content'] = str_replace("大6", "大陆", $data['content']);
+            $data['content'] = str_replace("艹", "操", $data['content']);
+
 
             $postfields = array(
                 'auth_key' => 'b9cfd125-5af6-2ad7-ab60-22475d3f096f',
