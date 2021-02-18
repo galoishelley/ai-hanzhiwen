@@ -56,6 +56,17 @@ class My_REST_Posts_Controller
             // Register our schema callback.
             'schema' => array($this, 'get_item_schema'),
         ));
+
+        register_rest_route('/hanzhiwen', '/getAPICount', array(
+            // Here we register the readable endpoint for collections.
+            array(
+                'methods'   => 'GET',
+                'callback'  => array($this, 'get_APICount'),
+                // 'permission_callback' => array($this, 'permissions_check'),
+            ),
+            // Register our schema callback.
+            'schema' => array($this, 'get_item_schema'),
+        ));
     }
 
     public function permissions_check($request)
@@ -96,6 +107,21 @@ class My_REST_Posts_Controller
 
         return rest_ensure_response($data);
     }
+    public function get_APICount($request)
+    {
+        // http://sinovelai.local/wp-json/hanzhiwen/getAPICount
+        $data = array();
+
+        $count_api_call = get_option('count_api_call', 0);
+        $count_translated_words = get_option('count_translated_words', 0);
+        $data['how_many_api_requests_have_been_made_since_2021_02_18']=$count_api_call;
+        $data['how_many_words_have_been_translated_since_2021_02_18']=$count_translated_words;
+
+        return rest_ensure_response($data);
+    }
+
+
+    
 
 
     public function get_content($request)
@@ -135,8 +161,23 @@ class My_REST_Posts_Controller
 
         $store_chapter = get_page_by_title($bookId . ',' . $chapterId, OBJECT, 'post');
 
+
+
+        $count_api_call = get_option('count_api_call', 0);
+        $count_api_call++;
+        update_option('count_api_call',$count_api_call);
+
+
+
+        
+
         if ($store_chapter) {
             $res['content'] = $store_chapter->post_content;
+
+            $count_translated_words = get_option('count_translated_words', 0);
+            $count_translated_words+=str_word_count($res['content']);
+            update_option('count_translated_words',$count_translated_words);
+            
             return rest_ensure_response($res);
         } else {
 
@@ -191,6 +232,11 @@ class My_REST_Posts_Controller
 
 
             $res['content'] = $jsonobj->translations[0]->text;
+
+
+            $count_translated_words = get_option('count_translated_words', 0);
+            $count_translated_words+=str_word_count($res['content']);
+            update_option('count_translated_words',$count_translated_words);
 
 
             // Gather post data.
