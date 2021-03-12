@@ -140,10 +140,8 @@ class My_REST_Posts_Controller
             return rest_ensure_response($res);
         }
 
-
-
         global $wpdb;
-        $SQL_get_chapter_number = "select count(*) as cnum from wp_postmeta WHERE meta_key='book_id' and meta_value= '{$bookId}'";
+        $SQL_get_chapter_number = "select count(*) as cnum from lp_postmeta WHERE meta_key='book_id' and meta_value= '{$bookId}'";
         $chapter_number = $wpdb->get_results($SQL_get_chapter_number);
 
         $cnum = (int)($chapter_number[0]->cnum);
